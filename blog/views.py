@@ -14,3 +14,8 @@ class PostDetail(DetailView):
     template_name = "detail.html"
     context_object_name = "post"
     model = Post
+
+class PostsByAuthor(AllPosts):
+    """ Render a specific post """
+    def get_queryset(self):
+        return Post.objects.filter(author_id=self.kwargs['id'])
