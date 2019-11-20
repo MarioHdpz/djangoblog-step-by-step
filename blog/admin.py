@@ -1,3 +1,8 @@
+""" Add blog models to admin """
 from django.contrib import admin
 
-# Register your models here.
+from blog.models import Post, Author, Tag
+
+admin.site.register(Post)
+admin.site.register(Author)
+admin.site.register(Tag)
