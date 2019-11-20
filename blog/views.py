@@ -1,3 +1,10 @@
-from django.shortcuts import render
+""" Blog views """
+from django.views.generic import ListView
 
-# Create your views here.
+from .models import Post
+
+class AllPosts(ListView):
+    """ Render all posts """
+    template_name = "blog.html"
+    context_object_name = "posts"
+    model = Post
