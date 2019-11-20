@@ -14,7 +14,7 @@
                 <h6 class="card-title text-center">{{ post.header }}</h6>
               </a>
           </div>
-          <a href="{% url 'author_posts' id=post.author.id %}">
+          <a href="{% url 'author_posts' slug=post.author.slug %}">
             <p class="text-center">By {{ post.author }}</p>
           </a>
         </div>

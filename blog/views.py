@@ -18,4 +18,4 @@ class PostDetail(DetailView):
 class PostsByAuthor(AllPosts):
     """ Render a specific post """
     def get_queryset(self):
-        return Post.objects.filter(author_id=self.kwargs['id'])
+        return Post.objects.filter(author__slug=self.kwargs['slug'])

@@ -5,6 +5,7 @@ class Author(models.Model):
     """ Post author """
     firstname = models.CharField(max_length=40)
     lastname = models.CharField(max_length=40, blank=False)
+    slug = models.SlugField(max_length=60, blank=True, default='')
 
     def __str__(self):
         return '{} {}'.format(self.firstname, self.lastname)
