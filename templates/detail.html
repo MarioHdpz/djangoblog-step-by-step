@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="container my-4">
+      <h1 class="text-center">{{ post.header }}</h1>
+      <div class="text-center">
+        <img src="{{ post.image_url }}" class="img-fluid" />
+      </div>
+      <p class="my-4">{{ post.content }}</p>
+    </div>
+{% endblock %}
